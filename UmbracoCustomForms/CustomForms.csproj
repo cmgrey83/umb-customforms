@@ -331,6 +331,7 @@
     <Content Include="Views\Partials\ContactForm.cshtml" />
     <Content Include="App_Plugins\CustomForms\customform.resource.js" />
     <Content Include="App_Plugins\CustomForms\package.manifest" />
+    <Content Include="package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

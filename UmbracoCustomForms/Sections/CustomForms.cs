@@ -7,7 +7,7 @@ using umbraco.interfaces;
 
 namespace CustomForms.Sections
 {
-    [Application("CustomForms", "CustomForms", "icon-car", 15)]
+    [Application("CustomForms", "CustomForms", "icon-conversation", 15)]
     public class CustomForms : IApplication
     {
     }

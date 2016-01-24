@@ -9,19 +9,23 @@
         <umb-tab-view>
             <umb-tab id="tab1">
                 <div class="umb-pane">
+                    <button type="button" ng-csv="records" csv-header="keys(records[0])" filename="{{filename}}" style="margin-bottom:20px;">Export as CSV</button>
+
                     <table border="1" cellpadding="10">
                         <tbody>
                             <tr>
-                                <th ng-repeat="key in keys(records[0]) track by $index">{{cleanOutput(key, key)}}</th>
+                                <th ng-repeat="key in keys(records[0]) track by $index">{{key}}</th>
                             </tr>
-                            <tr ng-repeat="record in records">
+                            <tr ng-repeat="record in records track by $index">
 
                                 <td ng-repeat="key in keys(record) track by $index">
-                                    {{cleanOutput(record[key], key)}}
+                                    {{fixDate(record[key], key)}}
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                 
+                    
                 </div>
                 
             </umb-tab>

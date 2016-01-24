@@ -1,0 +1,7 @@
+{
+  "name": "UmbracoCustomForms",
+  "version": "0.1.0",
+  "devDependencies": {
+    "ng-csv": "^0.3.6"
+  }
+}

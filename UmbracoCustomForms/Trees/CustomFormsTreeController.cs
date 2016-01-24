@@ -19,7 +19,7 @@ namespace CustomForms.Controllers
             var config = CustomFormsConfig.GetConfig();
             foreach (Form form in config.Forms)
             {           
-                var formNode = this.CreateTreeNode(form.Name, "-1", queryStrings, form.DisplayName, "icon-truck", false);
+                var formNode = this.CreateTreeNode(form.Name, "-1", queryStrings, form.DisplayName, "icon-conversation-alt", false);
 
                 nodes.Add(formNode);
             }

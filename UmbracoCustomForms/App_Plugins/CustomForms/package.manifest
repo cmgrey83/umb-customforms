@@ -2,5 +2,6 @@
 	javascript: [
 	    '~/App_Plugins/CustomForms/backoffice/CustomFormsTree/edit.controller.js',
 		'~/App_Plugins/CustomForms/customform.resource.js',
+		'~/node_modules/ng-csv/build/ng-csv.min.js',
 	]
 }
