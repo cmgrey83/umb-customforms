@@ -37,7 +37,7 @@ Setup
     </Forms>
   </CustomForms>
 
-  ALSO: Make sure the section is registered in the web.config with the following in the <configSections> section:
+  Make sure the section is registered in the web.config with the following in the <configSections> section:
   
   <section name="CustomForms" type="CustomForms.Setup.CustomFormsConfig" />
 
@@ -64,7 +64,7 @@ Setup
 
 
 NOTE: There is are example forms in the code (ContactForm and OtherForm) - however the DB setup is commented out to prevent the database tables
-being created in your project. If you want to view the working examples, uncomment the setup code in the CustomFormsSetup.cs file. OTherwise, you
+being created in your project. If you want to view the working examples, uncomment the setup code in the CustomFormsSetup.cs file. Otherwise, you
 will probably want to remove the examples / replace with your own implementations.
 
 Quick setup checklist:
