@@ -1,0 +1,30 @@
+﻿@model CustomForms.Models.Forms.ContactForm
+@using CustomForms.Repositories;
+@using CustomForms.Models.Forms;
+
+@{
+     var repo = new CustomFormRepo();
+}
+
+@using(Html.BeginUmbracoForm("SubmitForm", "ContactFormSurface", null, new { @class="contact-form" }))
+{
+    @Html.LabelFor(f => f.Name);
+    @Html.TextBoxFor(f => f.Name)
+    @Html.LabelFor(f => f.Email);
+    @Html.TextBoxFor(f => f.Email);
+    @Html.LabelFor(f => f.EnquiryType);
+    @Html.TextBoxFor(f => f.EnquiryType);
+    @Html.LabelFor(f => f.Enquiry);
+    @Html.TextBoxFor(f => f.Enquiry);
+    <input type="submit" value="Submit" />
+}
+
+@foreach(ContactForm formSub in repo.GetAll<ContactForm>())
+{
+    <p><strong>Name: </strong>@formSub.Name</p>
+    <p><strong>Email: </strong>@formSub.Email</p>
+    <p><strong>Enquiry: </strong>@formSub.Enquiry</p>
+    <p><strong>Enquiry type: </strong>@formSub.EnquiryType</p>
+    <p><strong>Submission date: </strong>@formSub.DateSubmitted</p>
+    <hr/>
+}

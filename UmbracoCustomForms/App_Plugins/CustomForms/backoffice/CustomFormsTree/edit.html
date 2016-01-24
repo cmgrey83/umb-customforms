@@ -1,0 +1,30 @@
+﻿<form ng-controller="CustomForms.FormEditController">
+    <umb-panel>
+        <umb-header tabs="content.tabs">
+            <div class="umb-headline-editor-wrapper span12 ng-scope">
+                <h1 class="ng-binding">{{menuNode.name}}</h1>
+            </div>
+        </umb-header>
+
+        <umb-tab-view>
+            <umb-tab id="tab1">
+                <div class="umb-pane">
+                    <table border="1" cellpadding="10">
+                        <tbody>
+                            <tr>
+                                <th ng-repeat="key in keys(records[0]) track by $index">{{cleanOutput(key, key)}}</th>
+                            </tr>
+                            <tr ng-repeat="record in records">
+
+                                <td ng-repeat="key in keys(record) track by $index">
+                                    {{cleanOutput(record[key], key)}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </umb-tab>
+        </umb-tab-view>
+    </umb-panel>
+</form>
